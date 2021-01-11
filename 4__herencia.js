@@ -30,3 +30,5 @@ var coche1 = new Coche("Seat","verde", 2019, 5);
 // llamada al método propio 
 console.log(coche1.abrir__maletero());
 console.log(coche1.edad__vehiculo());
+
+
