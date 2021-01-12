@@ -19,7 +19,7 @@ var coche2 = new Coche("Fiat", 2003, "azul");
 var coche3 = new Coche("Renault", 2020, "verde");
 var coche4 = new Coche("KIA", 2015, "amarillo");
 var coche5 = new Coche("BMW", 2010, "naranja");
-// llamada al método 
+// comprobación de las propiedades y llamadas a métodos de 2 coches
 console.log("El coche " + coche1.marca + " tiene " + coche1.edad__coche() + " años y es de color " + coche1.color);
 console.log("El coche " + coche2.marca + " tiene " + coche2.edad__coche() + " años y es de color " + coche2.color);
 // ----------------------------------------------------------- 

@@ -8,9 +8,9 @@
 // - Método: Una capacidad ó acción del objeto
 // - Constructor: Método especial. Se llama automáticamente en la instancia de una clase. Generalmente se utiliza para inicializar las propiedades del objeto.
 // - Herencia: Una clase creada mediante una herencia (subclase ó clase hija) hereda todas las propiedades y métodos de la clase padre (superclase ó clase padre)
-// - Encapsulamiento: 
-// - Abstracción:
-// - Polimorfismo: 
+// - Encapsulamiento: La capacidad de ocultar props/métodos que se consideren o bien privados ó innecesarios para la interacción con el objeto desde el exterior 
+// - Abstracción: Proceso del diseño de las props/atributos y métodos de una clase
+// - Polimorfismo: La manera de que diferentes clases podrían definir la misma propiedad y método
 
 // En JS, podemos definir un objeto sin tener una instancia a una clase (Objeto literal)
 // var yo = { nombre: "Armand", edad: 40, estatura: 180 };

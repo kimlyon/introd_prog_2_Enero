@@ -16,7 +16,7 @@ class Vehiculo {
 class Coche extends Vehiculo {
     // constructor 
     constructor(marca, color, any, num_puertas){
-        // super: hereda las props de la superclase "Vehículo "
+        // super: hereda las props de la superclase "Vehículo"
         super(marca, color, any);
         this.num_puertas = num_puertas;
     }
