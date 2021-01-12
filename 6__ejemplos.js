@@ -93,8 +93,8 @@ class Usuario_Netflix {
     #password = ''; 
     constructor(nombre, mes_alta) {
         this.nombre = nombre;
-        this.mes_alta = mes_alta;
-        this.premium = false;
+        this.fecha_alta = fecha_alta;
+        this.premium = true;
     }
     // método SETTER que asigna los datos a las props privadas 
     setEmailPass(email, pass){
@@ -102,44 +102,25 @@ class Usuario_Netflix {
         this.#password = pass;
     }
     // método 
-    ver_catálogo(mes_actual){
-        if (mes_actual - this.mes_alta < 0){
-            console.log("No puedes ver el catálogo");     
+    ver_catálogo(fecha_actual){
+        var tiempo = fecha_actual.getTime() - this.fecha_alta.getTime();
+        var dias = Math.floor(tiempo / (1000 * 60 * 60 * 24));
+        if (dias > 31){
+            console.log("Se ha terminado el plazo de prueba");   
+            this.premium = true;
         }else {
-            console.log("Listado de películas y series de Netflix");
+            console.log("Elige una película ó serie de Netflix");
         }
     }
 }
-// subclases
-class Usuario_Premium_Netflix extends Usuario_Netflix{
-    constructor(){
-        super();
-    }
-}
+// gestión fecha alta inicial 
+var fecha_alta = new Date();
 // instancias 
 // USUARIO NORMAL 
-var usuario1 = new Usuario_Netflix("armand", 0);
+var usuario1 = new Usuario_Netflix("armand", fecha_alta);
 // comprobacion de encapsulamiento 
 //usuario1.#email = "armand@gmail.com"; Error: Private field '#email' must be declared in an enclosing class
 // método setter para las props privadas 
 usuario1.setEmailPass("armand@gmail.com","a1234a");
 console.log(usuario1); // no nos muestra info privada (props)
-var fecha = new Date();
-var mes = fecha.getMonth();
-// console.log(mes); 0: Enero
-usuario1.ver_catálogo(mes);
-// USUARIO PREMIUM 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+usuario1.ver_catálogo(new Date());
